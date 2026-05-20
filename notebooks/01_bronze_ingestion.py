@@ -1,12 +1,12 @@
 import sys
 
-sys.path.append("/Workspace/Repos/sureshkatte/healthcare-databricks-project")
+sys.path.append("/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project")
 
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
 
-BASE_PATH = "/Workspace/Repos/sureshkatte/healthcare-databricks-project"
+BASE_PATH = "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project"
 
 patients_df = spark.read.format("csv").option("header", "true").option("inferSchema", "true").load(f"{BASE_PATH}/data/patients.csv")
 
