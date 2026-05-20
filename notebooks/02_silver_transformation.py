@@ -9,6 +9,6 @@ silver_claims_df = bronze_claims_df.withColumn("claim_id", col("claim_id").cast(
     .withColumn("created_at", current_timestamp()) \
     .dropDuplicates()
 
-silver_claims_df.write.mode('overwrite').saveAsTable("workspace.default.silver_claims")
+silver_claims_df.write.mode('overwrite').saveAsTable("workspace.default.silver_repo_claims")
 
 print("Silver Layer Transformation Completed Successfully!")
