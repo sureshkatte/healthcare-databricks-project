@@ -1,7 +1,7 @@
 from pyspark.sql.functions import col
 
 silver_claims_df = spark.table(
-    "workspace.default.silver_claims"
+    "workspace.default.silver_repo_claims"
 )
 
 print("===================================")
