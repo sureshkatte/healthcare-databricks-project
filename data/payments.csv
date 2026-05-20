@@ -1,0 +1,8 @@
+payment_id,claim_id,payment_method,payment_status
+201,101,Bank Transfer,Completed
+202,102,Credit Card,Pending
+203,103,Bank Transfer,Failed
+204,104,UPI,Completed
+205,105,Credit Card,Completed
+206,106,UPI,Pending
+207,107,Bank Transfer,Completed
