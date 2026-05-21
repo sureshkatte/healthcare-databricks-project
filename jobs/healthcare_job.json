@@ -1,0 +1,65 @@
+{
+  "name": "healthcare_claims_pipeline",
+  "description": "Pipeline for processing healthcare claims data",
+  "tasks": [
+    {
+      "task_key": "bronze_ingestion",
+      "description": "Ingest raw healthcare claims data into the bronze layer",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/01_bronze_ingestion.py"
+      }
+    },
+    {
+      "task_key": "silver_transformation",
+      "description": "Process bronze data and create silver layer",
+      "depends_on": [
+        {
+          "task_key": "bronze_ingestion"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/02_silver_transformation.py"
+      }
+    },
+    {
+      "task_key": "data_quality_checks",
+      "description": "Run data quality checks on silver data",
+      "depends_on": [
+        {
+          "task_key": "silver_transformation"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/03_data_quality_checks.py"
+      }
+    },
+    {
+      "task_key": "gold_kpi_layer",
+      "description": "Create gold layer with KPIs and aggregates",
+      "depends_on": [
+        {
+          "task_key": "data_quality_checks"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/04_gold_kpi_layer.py"
+      }
+    },
+    {
+      "task_key": "gold_dashboard_tables",
+      "description": "Create tables for dashboard visualization",
+      "depends_on": [
+        {
+          "task_key": "gold_kpi_layer"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/05_gold_dashboard_tables.py"
+      }
+    }
+  ],
+  "schedule": {
+    "quartz_cron_expression": "0 0 9 * * ?",
+    "timezone_id": "Asia/Kolkata"
+  }
+}
