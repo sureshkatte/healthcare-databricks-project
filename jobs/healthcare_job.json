@@ -6,7 +6,7 @@
       "task_key": "bronze_ingestion",
       "description": "Ingest raw healthcare claims data into the bronze layer",
       "notebook_task": {
-        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/01_bronze_ingestion.py"
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/01_bronze_ingestion"
       }
     },
     {
@@ -18,7 +18,7 @@
         }
       ],
       "notebook_task": {
-        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/02_silver_transformation.py"
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/02_silver_transformation"
       }
     },
     {
@@ -30,7 +30,7 @@
         }
       ],
       "notebook_task": {
-        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/03_data_quality_checks.py"
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/05_data_quality_checks"
       }
     },
     {
@@ -42,7 +42,7 @@
         }
       ],
       "notebook_task": {
-        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/04_gold_kpi_layer.py"
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/03_gold_kpi_layer"
       }
     },
     {
@@ -54,7 +54,7 @@
         }
       ],
       "notebook_task": {
-        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/05_gold_dashboard_tables.py"
+        "notebook_path": "/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project/notebooks/04_gold_dashboard_tables"
       }
     }
   ],
