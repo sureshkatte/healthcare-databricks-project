@@ -1,3 +1,9 @@
+"""
+Data Quality Checks for Claims Data
+This notebook performs data quality checks on the silver claims data to ensure that 
+the data is clean and reliable for analysis.
+"""
+
 from pyspark.sql.functions import col
 
 silver_claims_df = spark.table(

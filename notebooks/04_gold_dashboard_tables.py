@@ -1,3 +1,7 @@
+"""
+Gold Dashboard Tables Creation
+This script creates aggregated tables in the Gold layer for dashboarding purposes.
+"""
 spark.sql("""
           CREATE OR REPLACE TABLE workspace.default.gold_claim_status_kpis AS
           SELECT

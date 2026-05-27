@@ -1,3 +1,8 @@
+"""
+Bronze Layer Ingestion Script
+This script reads raw CSV files for patients, claims, and payments, and ingests them
+into the Bronze layer as Delta tables in the Databricks environment.
+"""
 import sys
 
 sys.path.append("/Workspace/Users/suresh.babu@accionlabs.com/healthcare-databricks-project")

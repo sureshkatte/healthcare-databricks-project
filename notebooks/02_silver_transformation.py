@@ -1,3 +1,8 @@
+"""
+Silver Layer Transformation Script
+This script reads data from the Bronze layer, performs necessary transformations and cleaning,
+and writes the cleaned data to the Silver layer as Delta tables in the Databricks environment.
+"""
 from pyspark.sql.functions import (col, current_timestamp, to_date)
 
 bronze_claims_df = spark.table("workspace.default.bronze_claims")
